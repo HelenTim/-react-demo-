@@ -26,6 +26,7 @@
            render(){
                //读取状态
                const {isLikeMe} = this.state//解构赋值
+               // 这里的事件并不是原生的事件，是react自己的事件 所以click首字母打写。
                return <h2 onClick={this.handleClick}>{isLikeMe?'你喜欢我':'我喜欢你'}</h2>
            }
        }
