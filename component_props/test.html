@@ -25,13 +25,13 @@
                 )
         }
     }
-    //指定属性默认值
+    //指定属性默认值。自注：给属性值赋默认值。
     Person.defaultProps = {
         sex : '男',
         age : '18'
         
     }
-    //指定属性值的类型和必要性
+    //指定属性值的类型和必要性。自注：属性值类型的检查。
     Person.propTypes = {
         name: PropTypes.string.isRequired,
         age: PropTypes.number
