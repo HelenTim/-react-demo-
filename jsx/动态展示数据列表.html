@@ -10,7 +10,7 @@
         const names = ['jquery','zepto','angular','react','vue'];
         //创建虚拟dom
         const ul = (<ul>
-        {
+        {   //  react自动会把数组转换成es6里map结构数据显示。
             names.map((name,index)=><li key={index}>{name}</li>)
         }
         </ul>)
