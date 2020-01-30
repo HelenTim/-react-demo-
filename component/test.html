@@ -9,11 +9,11 @@
     <div id="test2"></div>
     <script type="text/babel">
         //定义组件
-        //1.工厂函数组件
+        //1.工厂函数组件。无状态组件，不用创建一个对象 效率。
         function Mycomponent(){
             return <h2>工厂函数组件（简单组件）</h2>
         }
-        //2.es6类组件（复杂组件）
+        //2.es6类组件（复杂组件）。有状态组件 需要创建一个对象 效率低。
         class Mycomponent2 extends React.Component{
             render(){   //自注：页面最终显示的不是组件的标签 而是 组件标签里面的东西。
                 return <h3>es6类组件（复杂组件）</h3>
