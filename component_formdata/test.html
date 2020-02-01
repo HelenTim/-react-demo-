@@ -40,10 +40,13 @@
             render(){
                 return(
                     <form onSubmit={this.handleSubmit}>
+                        // 非受控组件的写法：因为react提倡不直接操作dom 所以这种做法不是很好。取值的时候实际在操作实际的dom只不过是在读取值。
                         用户名：<input type="text" ref={input => this.username=input}/>
-                        
+                        //
+                        //
                         // 原生dom的onChange事件是在input失去焦点的时候触发
                         // 但是react用的不是原生的dom而是react自己定义的dom
+                        // 下面在取值的时候没有操作实际的dom。
                         
                         密码：<input type="password" value={this.state.pwd} onChange={this.handleChange}/>  
                         <input type="submit" value="登陆" />
