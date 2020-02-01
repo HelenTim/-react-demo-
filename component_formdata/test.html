@@ -5,6 +5,12 @@
     <script src="../build/prop-types.js"></script>
     <script src="../build/babel.min.js"></script>
   </head>
+/*
+       需求：自定义包含表单的组件
+          1. 输入密码后，点击登录提示输入信息
+          2. 不提交表单
+  
+*/
   <body>
     <div id="test1"></div>
     <div id="test2"></div>
@@ -35,7 +41,11 @@
                 return(
                     <form onSubmit={this.handleSubmit}>
                         用户名：<input type="text" ref={input => this.username=input}/>
-                        密码：<input type="password" value={this.state.pwd} onChange={this.handleChange}/>
+                        
+                        // 原生dom的onChange事件是在input失去焦点的时候触发
+                        // 但是react用的不是原生的dom而是react自己定义的dom
+                        
+                        密码：<input type="password" value={this.state.pwd} onChange={this.handleChange}/>  
                         <input type="submit" value="登陆" />
                     </form>
                 )
