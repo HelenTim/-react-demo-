@@ -29,7 +29,7 @@
         componentDidUpdate(prevProps, prevState) {
             console.log('componentDidUpdate')
         }
-        componentDidMount() {
+        componentDidMount() {  // render函数执行完以后 页面就渲染完成 紧接着就是这一个生命周期函数执行。
             console.log('componentDidMount')
             this.intervalId = setInterval(function(){
                 console.log('定时器执行')
@@ -45,7 +45,7 @@
             console.log('componentWillUnmount')
             clearInterval(this.intervalId)
         }
-        render(){
+        render(){  // 自注： 每一次数据的改变 render函数都会重新被调用一次 页面相应位置都会渲染一次。
             console.log('render()')
             const {opacity} = this.state
             return(
