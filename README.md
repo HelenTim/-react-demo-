@@ -47,10 +47,27 @@
  ### react-router：
      - 我们以组件的形式使用react-router;
      - 参考： ‘尚硅谷-React全家桶.docx’  节
-     - 要想地址跳转 可以使用 react-router的：NavLink 组件 配合to属性指定路径。
+     - 要想点击地址跳转 可以使用 react-router的：NavLink 组件 配合to属性指定路径。
+       + 此组件还可以指定一个在激活时的class名：声明 activeClassName属性名及值。
+       + 参考：https://github.com/HelenTim/-react-demo-/edit/master/react-router4/src/components/MyNavLink.jsx
      - 组件的显示：
        + 外层使用 react-router的 Switch组件：只显示其中里面的一个组件。
        + 里层使用 react-router的 Route组件
          - path属性写路由地址 和 NavLink组件的 to属性值匹配。
          - component属性值是地址对应的组件。
+         - 只有路径被匹配到时 Route组件上声明的组件才会显示：因此 此组件就像一个占位符，路径就是控制在它上面component声明的组件显示与否。
+         - Route组件可以单独使用：https://github.com/HelenTim/-react-demo-/blob/master/react-router4/src/views/message.jsx  这里的route组件就是第3级路由 显示信息的详情用的 他的外层没有Switch组件。
        + 里层使用 react-router的 Redirect组件 给to属性加上地址：默认显示某个组件的内容。
+     - 参考：https://github.com/HelenTim/-react-demo-/blob/master/react-router4/src/components/app.jsx
+     
+  ### 路由的嵌套：很简单  就是在子组件里把路由按照上面的套路重写一次就好
+  ### 动态路由：和vue的动态路由很像
+      - 参考：https://github.com/HelenTim/-react-demo-/blob/master/react-router4/src/views/message.jsx  第423行、 第55行。
+  ### 路由传参：
+      - 在给浏览器安装react开发插件工具之后 我们点击这个工具 展开标签，定位到对应组件的时候 发现此组件的所有数据都在此组件的props属性上
+      - 路由上的 数据在 this.props.match 对象里面。
+      - 组件里可以直接使用props：props是父组件传递给子组件的。
+        + https://github.com/HelenTim/-react-demo-/blob/master/react-router4/src/views/message.jsx
+        + https://github.com/HelenTim/-react-demo-/blob/master/react-router4/src/views/message-detail.jsx
+  
+  ### 
