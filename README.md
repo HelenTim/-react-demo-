@@ -66,7 +66,7 @@
   ### 路由传参：
       - 在给浏览器安装react开发插件工具之后 我们点击这个工具 展开标签，定位到对应组件的时候 发现此组件的所有数据都在此组件的props属性上
       - 路由上的 数据在 this.props.match 对象里面。
-      - 组件里可以直接使用props：props是父组件传递给子组件的。
+      - 路由的component上声明组件里可以直接使用props属性：说明路由组件可以自动的给它的子组件传数据。
         + https://github.com/HelenTim/-react-demo-/blob/master/react-router4/src/views/message.jsx
         + https://github.com/HelenTim/-react-demo-/blob/master/react-router4/src/views/message-detail.jsx
   
