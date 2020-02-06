@@ -78,7 +78,7 @@
   - https://www.bilibili.com/video/av51174155?p=35    第28:00
   - ‘尚硅谷-React全家桶.docx’  第7.2.4节
 
-### redux 核心使用步骤：
+### redux 核心使用步骤： 下面的项目仅仅演示了redux如何使用 而不是react-redux如何使用。
   - 利用redux库创建事件的订阅分发机制：
     + 利用redux的 createStore函数 创建事件的订阅分发机制对象：https://github.com/HelenTim/-react-demo-/blob/master/react-redux/src-redux/redux/store.js
 
@@ -97,3 +97,16 @@
         + dispatch方法 的参数就是  一个action对象。
   - 其余的东西就是自己封装了。
     
+### react-redux：简化在react中redux的使用、降低react和redux的耦合度
+  - Provider组件来订阅事件，并且把事件订阅发布对象传递给此组件：https://github.com/HelenTim/-react-demo-/blob/master/react-and-redux/src-react-redux/index.js
+  - 使用connect函数 连接redux和react组件（把数据和绑定的事件当做属性传递给相应的组件）：https://github.com/HelenTim/-react-demo-/blob/master/react-and-redux/src-react-redux/containers/app.jsx
+    + connect会被调用然后返回一个函数 返回的这个函数还会被传参并调用：最终返回一个新组件
+      - 调用返回(connect函数返回)的这个函数是时 需要传递一个参数 这个参数是一个组件，这个组件也接收在调用connect函数时传递进去的参数。
+        + https://github.com/HelenTim/-react-demo-/blob/master/react-and-redux/src-react-redux/containers/app.jsx 的Counter组件。
+      - connect函数接收一些参数：
+        + 第一个参数是一个函数：此函数返回一个对象。形参自动读取创建事件订阅分发函数是哪个参数函数的第一个参数值。
+        + 其余参数是创建action对象的函数。
+        + 所有的参数都会被当做属性传递给经connect函数所创建出来的新组件。
+          - 这个新组件在Provider组件的里面 但是在 connet函数返回函数所用到的参数组件的外面。
+   - 组件里具体数据的使用 以及事件的触发：https://github.com/HelenTim/-react-demo-/blob/master/react-and-redux/src-react-redux/components/counter.jsx
+     + 都是通过props调用。
