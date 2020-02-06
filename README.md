@@ -77,3 +77,23 @@
 ### ant-design的按需打包
   - https://www.bilibili.com/video/av51174155?p=35    第28:00
   - ‘尚硅谷-React全家桶.docx’  第7.2.4节
+
+### redux 核心使用步骤：
+  - 利用redux库创建事件的订阅分发机制：
+    + 利用redux的 createStore函数 创建事件的订阅分发机制对象：https://github.com/HelenTim/-react-demo-/blob/master/react-redux/src-redux/redux/store.js
+
+      - createStore  函数的参数是一个函数， 此参数函数有两个参数：https://github.com/HelenTim/-react-demo-/blob/master/react-redux/src-redux/redux/reducers.js
+        + 第一个参数就是(声明)初始化全局公用的数据
+        + 第二个参数是一个对象(action对象)：
+          - 第一个属性type指定事件
+          - 第二个属性data指定此事件需要用到的数据
+      - 导出 这个事件订阅分发机制对象
+     + 然后我们可以根据不同事件来操作公用的数据 并且返回新的数据
+  - 利用这个事件订阅分发机制对象：
+    + 利用此对象来(绑定)订阅 action对象里的事件：https://github.com/HelenTim/-react-demo-/blob/master/react-redux/src-redux/index.js
+    + 以便我们后面利用此对象来调用已经绑定的事件、改变全局公用的数据：
+      - 把此对象传递给组件 以便组件调用绑定的事件：https://github.com/HelenTim/-react-demo-/blob/master/react-redux/src-redux/index.js
+      - 组件调用此对象的 dispatch方法来触发  已经绑定的事件：https://github.com/HelenTim/-react-demo-/blob/master/react-redux/src-redux/components/app.jsx
+        + dispatch方法 的参数就是  一个action对象。
+  - 其余的东西就是自己封装了。
+    
