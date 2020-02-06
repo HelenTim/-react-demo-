@@ -4,7 +4,7 @@ class Counter extends Component {
   state = {
     selectValue: 0
   };
-  static propTypes = {
+  static propTypes = { // 这里的三个数据来自于：https://github.com/HelenTim/-react-demo-/blob/master/react-and-redux/src-react-redux/containers/app.jsx
     count : PropTypes.number.isRequired,
     increment: PropTypes.func.isRequired,
     decrement: PropTypes.func.isRequired
