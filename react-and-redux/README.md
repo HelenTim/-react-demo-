@@ -1,4 +1,4 @@
-#### 目录解读
+#### 目录解读：此项目演示了react-redux如何使用
 
 该目录是通过执行命令：create-react-app (react-cli) 创建的目录
 
