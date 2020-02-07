@@ -108,7 +108,12 @@
       - 调用返回(connect函数返回)的这个函数是时 需要传递一个参数 这个参数是一个组件，这个组件也接收在调用connect函数时传递进去的参数。
         + https://github.com/HelenTim/-react-demo-/blob/master/react-and-redux/src-react-redux/containers/app.jsx 的Counter组件。
       - connect函数接收一些参数：
-        + 第一个参数是一个函数：此函数返回一个对象。形参自动读取创建事件订阅分发函数是哪个参数函数的第一个参数值。
+        + 第一个参数是一个函数：此函数返回一个对象。形参的值就是reducers.js向外暴露的数据。
+          - 如果reducers.js 向外暴露的是一个数据 那么这个形参就是这个数据
+          - 如果reducers.js 向外暴露的是多个数据 那么这个形参就是一个对象 对象里面的对应的 某个属性才表示某个组件对应的数据。
+            + https://github.com/HelenTim/-react-demo-/blob/master/react-and-redux/src/containers/app/app.jsx  这里我们只用到reducers.js
+            里的一个数据  尽管state是一个对象 所以我们也只是取了其中一个comments数据(这里的功能只用到了这个数据)。
+          - 这个返回对象的属性值是给组件传递数据用的。组件里取数据也是用这个对象的属性。
         + 其余参数是创建action对象的函数。
         + 所有的参数都会被当做属性传递给经connect函数所创建出来的新组件。
           - 这个新组件在Provider组件的里面 但是在 connet函数返回函数所用到的参数组件的外面。
@@ -129,5 +134,8 @@
          + 在函数中执行异步代码；
          + 此函数被异步中间件调用；
        - 在异步函数里使用dispatch()方法来分发action
+ ### 利用redux的combineReducers函数可以定义多个公用的数据
+     - https://github.com/HelenTim/-react-demo-/blob/master/react-and-redux/src/redux/reducers.js
+       + 这里向外暴露的不再是一个数据而是两个数据。
   ### jebrain快捷键
      - 切换文本大小写：选中文本  然后  ctrl+shift+x
