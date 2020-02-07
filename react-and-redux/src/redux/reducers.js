@@ -25,11 +25,16 @@ function counter(state = 0, action) {
       return state
   }
 }
-export default combineReducers({
+
+
+
+//此时redux向外暴露的state(数据)结构(因为暴露的不再是一个数据 而是借助combineReducers函数处理之后的两个数据) 是一个对象。
+//{counter:xxx,comments:[xxx]}
+// 当定义多个公用的数据时 就需要借助combineReducers函数来处理这些数据 然后把处理之后的结果导出去。
+
+export default combineReducers({  // 自注：此时这里定义了两个公用的数据。每一个数据都对应一个此数据名的函数。
   comments,
   counter
 }
 )
 
-//redux向外暴露的state结构？
-//{counter:2,comments:[]}
