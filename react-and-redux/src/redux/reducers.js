@@ -5,7 +5,7 @@ const initComments = []
 function comments(state=initComments,action){
   switch(action.type) {
     case ADD_COMMENTS:
-      return [action.data, ...state]
+      return [action.data, ...state]   // 这里我们展开的是state而不是initComment，因为每一次数据的更新数据都会保存在当前的形参state里。
     case DELERE_COMMENTS:
       return state.filter((comment,index) => index!==action.data) //返回下标不为index的数组元素
     case RECEIVE_COMMENTS:
