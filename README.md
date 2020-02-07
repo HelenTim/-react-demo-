@@ -88,6 +88,10 @@
           - 第一个属性type指定事件
           - 第二个属性data指定此事件需要用到的数据
       - 导出 这个事件订阅分发机制对象
+      - reduce.js的分支语句 default语句的作用是给公用数据返回一个初始话数据。
+      - 在reduce.js里操作数据的时候 我们必须用函数的第一个参数(state)来生产新的数据
+        + 因为 每一次数据更新之后 新的数据就会保存在这个形参里面而不是保存在其他变量里面。
+        + 我们只能返回新的数据 而绝对不能改变原有state的数据。
      + 然后我们可以根据不同事件来操作公用的数据 并且返回新的数据
   - 利用这个事件订阅分发机制对象：
     + 利用此对象来(绑定)订阅 action对象里的事件：https://github.com/HelenTim/-react-demo-/blob/master/react-redux/src-redux/index.js
@@ -110,3 +114,20 @@
           - 这个新组件在Provider组件的里面 但是在 connet函数返回函数所用到的参数组件的外面。
    - 组件里具体数据的使用 以及事件的触发：https://github.com/HelenTim/-react-demo-/blob/master/react-and-redux/src-react-redux/components/counter.jsx
      + 都是通过props调用。
+### redux处理异步数据：使用 redux-thunk 中间件
+   - redux默认是不支持异步数据处理的；
+   - 他是属于redux的插件；
+   - 使用步骤：
+     + 引入redux的applyMiddleware中间件：https://github.com/HelenTim/-react-demo-/blob/master/react-and-redux/src-redux-thunk/redux/store.js
+     + 引入 redux-thunk模块：https://github.com/HelenTim/-react-demo-/blob/master/react-and-redux/src-redux-thunk/redux/store.js
+     + 应用异步中间件：https://github.com/HelenTim/-react-demo-/blob/master/react-and-redux/src-redux-thunk/redux/store.js
+     + 最好是让异步数据通过 redux-devtools-extension  模块 和开发工具同步
+       - 这样的话异步数据会被记录、 reducers里的操作函数的每一次调用也会被记录
+       - https://www.bilibili.com/video/av51174155?p=42   后面10分钟。
+     + 编写异步的actions（也可以叫异步提交action）：https://github.com/HelenTim/-react-demo-/blob/master/react-and-redux/src-redux-thunk/redux/actions.js 的incrementAsync()方法。
+       - 同步action都是返回一个对象，但是异步的action返回的是一个函数；
+         + 在函数中执行异步代码；
+         + 此函数被异步中间件调用；
+       - 在异步函数里使用dispatch()方法来分发action
+  ### jebrain快捷键
+     - 切换文本大小写：选中文本  然后  ctrl+shift+x
