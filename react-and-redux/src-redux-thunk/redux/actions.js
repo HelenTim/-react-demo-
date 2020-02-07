@@ -20,7 +20,7 @@ export const incrementAsync = (number) => {
     //异步的操作
     setTimeout(() => {
       //1s之后才去分发一个增加的action
-      dispatch(increment(number))
+      dispatch(increment(number))     // 自注：increment函数的作用是生成一个新的action。然后dispatch再把这个action分发出去。
     }, 1000)
   }
 }
