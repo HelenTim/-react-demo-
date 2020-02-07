@@ -39,6 +39,6 @@ class App extends Component {
 }
 
 export default connect( 
-  state => ({comments:state.comments}), //state包含comments数组
+  state => ({comments:state.comments}), //state包含comments数组。//尽管state是一个对象 代表redux定义了多个公用数据，但是我们整个应用只用到了comments这个数据 所以我们就只把这个数据绑定到这个应用里去。    
   {addComments,deleteComments,getComments}
 )(App);
