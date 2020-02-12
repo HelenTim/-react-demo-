@@ -23,7 +23,18 @@
     + 给Provider组件传递 store.js导出来的对象。
   - 此时 公用的数据和对应的action函数都已经传递到 connect新创造出来的组件里面去了。 在新创造出来的组件里就可以通过 this.poprs.xxx 来取到数据和对应action函数。
 
-   
+## 对于actions.js里函数的理解：声明被使用的事件
+  - action.js里的函数可以被导出从而被绑定到容器组件里。组件就可以调用此函数。
+    + actions.js里的action函数不一定要被导出，也可以不被导出而被其他的函数调用。
+  - actions.js里的函数有两种触发方式
+    + 组件调用actions.js里的(某个/某些)函数，并且传入参数
+    + actions.js里的异步action函数 也可以调用其他的action函数。
+## 对于reducers.js 的理解：以数据为主导 数据里面通过action.type声明涉及的各种事件来处理数据。
+   - 只要里面的函数被redux的combineReducers 函数处理过，那么此函数名就是公用的数据名
+     + 此数据可以被不同的事件使用，所以里面会把 action.type 拿来做判断以便区分不同事件对此数据做不同的处理。
+   - 函数里的action参数对应的是：触发事件返回的action对象(包含事件类型type和数据)。
+## 容器组件的理解：把事件 以及事件对应的数据 绑定到组件里去
+   - 使用react-redux的connect函数来把事件以及事件对应的数据 绑定到组件里去。
   
     
     
