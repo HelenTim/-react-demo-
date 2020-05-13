@@ -1,5 +1,6 @@
 # -react-demo-
-
+### 学习的先后顺序
+  -![顺序](./学习路径/基础学习路径.png)
 ### 值得关注的点
 ### 我们不使用组件化来写react的时候
   - 我们需要给script标签的type设置为 text/babel：因为babel的作者在被邀请到facebook工作时 就把解析react虚拟dom的功能写在了babel里面。
