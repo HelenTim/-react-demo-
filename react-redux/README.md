@@ -1,3 +1,7 @@
+### redux的理解：
+  - 参考：https://gitee.com/wangluoshihuang/shangguigureact-20180119/raw/master/基础部分/课件/尚硅谷-React全家桶.pdf 第8节。
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
