@@ -13,6 +13,8 @@ class Home extends Component {
                     <ul className='nav nav-tabs'>
                         <li>
                             <MyNavLink to='/home/news'>news</MyNavLink>  // 我们自己封装的组件里并没有接收news字符串的东西，怎么传递进去？
+                                                                         // 我们只是封装了一个MyNavLink组件，我们可以把它拿出来当标签使用。
+                                                                         // 我们自己写的组件这样使用不知道什么结果。
                         </li>
                         <li>
                             <MyNavLink to='/home/message'>message</MyNavLink>
