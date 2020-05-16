@@ -1,3 +1,6 @@
+#### 这个资料的几片资料值得细看
+  - https://gitee.com/wangluoshihuang/shangguigureact-20180119/raw/master/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E8%AF%BE%E4%BB%B6/%E5%B0%9A%E7%A1%85%E8%B0%B7-React%E5%85%A8%E5%AE%B6%E6%A1%B6.pdf
+  - https://gitee.com/wangluoshihuang/shangguigureact-20180119/raw/master/%E9%A1%B9%E7%9B%AE%E9%83%A8%E5%88%86/%E8%AF%BE%E4%BB%B6%E8%B5%84%E6%96%99/%E8%AF%BE%E4%BB%B6%E8%B5%84%E6%96%99/react%E5%85%A8%E6%A0%88%E9%A1%B9%E7%9B%AE-%E7%A1%85%E8%B0%B7%E7%9B%B4%E8%81%98.pdf
 # -react-demo-
 ### 学习的先后顺序
   -![顺序](./学习路径/基础学习路径.png)
