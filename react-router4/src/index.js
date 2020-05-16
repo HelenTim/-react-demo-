@@ -6,7 +6,7 @@ import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 render((
-    <BrowserRouter>
+    <BrowserRouter> // 一个应用只有一个BrowserRouter
         <App />
     </BrowserRouter>
 ),document.getElementById('root'))
