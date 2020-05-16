@@ -222,4 +222,4 @@ componentWillReceiveProps(newProps) {//指定了新的searchName然后发请求
 
 从github上面获取到名字中有aaa的前30位用户的用户名和头像，接口调用成果
 
-![](https://tva1.sinaimg.cn/large/006tNbRwgy1g9vasjgh4uj31820mkahg.jpg)  
+![](https://tva1.sinaimg.cn/large/006tNbRwgy1g9vasjgh4uj31820mkahg.jpg)    
