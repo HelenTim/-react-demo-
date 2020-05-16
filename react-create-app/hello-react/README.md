@@ -29,7 +29,9 @@
    ```
 
 4. 可以在组件内直接简化state、propTypes的写法
-
+  - 使用import React, { Component } from 'react';
+    - class App extends Component {}创建组件，而不是用React.Component来创建组件
+  
    ```
    state = {}
    
