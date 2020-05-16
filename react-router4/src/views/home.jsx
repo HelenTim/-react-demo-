@@ -12,7 +12,7 @@ class Home extends Component {
                 <div>
                     <ul className='nav nav-tabs'>
                         <li>
-                            <MyNavLink to='/home/news'>news</MyNavLink>
+                            <MyNavLink to='/home/news'>news</MyNavLink>  // 我们自己封装的组件里并没有接收news字符串的东西，怎么传递进去？
                         </li>
                         <li>
                             <MyNavLink to='/home/message'>message</MyNavLink>
