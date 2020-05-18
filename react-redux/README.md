@@ -1,7 +1,13 @@
 ### redux的理解：
   - 参考：https://gitee.com/wangluoshihuang/shangguigureact-20180119/raw/master/基础部分/课件/尚硅谷-React全家桶.pdf 第8节。
-
-
+  - 组件里无非是要得到数据和对数据操作：[参考](https://gitee.com/wangluoshihuang/shangguigureact-20180119/raw/master/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E8%AF%BE%E4%BB%B6/%E5%B0%9A%E7%A1%85%E8%B0%B7-React%E5%85%A8%E5%AE%B6%E6%A1%B6.pdf) 8.4.6节。
+    + 使用：this.props.store.dispatch(actions.decrement(number))来操作数据；
+    + 使用：this.props.store.getState()来获得数据。
+  - 使用 createStore(reducers里操作数据的具体做法的函数名) 创建出来一个store对象
+    + 把store对象赋值给组件的属性上，此时属性可以向下传递。所以子组件就可以拿到store对象的dispatch方法，来触发actons里的函数。
+    + [参考：](https://gitee.com/wangluoshihuang/shangguigureact-20180119/raw/master/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E8%AF%BE%E4%BB%B6/%E5%B0%9A%E7%A1%85%E8%B0%B7-React%E5%85%A8%E5%AE%B6%E6%A1%B6.pdf) 8.4.7和8.4.6。
+    
+  总之：先创建 store对象，然后利用store对象在子组里触发acton即可。
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
