@@ -1,4 +1,7 @@
 # 利用react-redux来改造之前的评论项目
+  - react-rdux:用在组件层。例如：provider包裹组件，以及使用connect把数据和cation里的方法注入到组件里。
+  - redux：用在store和reducer的构建
+  - redux-chunk:用在数据和开发工具同步。
 ### 目前这是最完整的react-redux应用。
 
 ## redux结合react-redux整体套路
